@@ -1,5 +1,5 @@
 {% set name = "google-cloud-bigtable" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eea9d4aca54499b555a893fa441deac1bd7ae9cbc8e03bdd681fd33fad72e170
+  sha256: 329a48f528e47eb77f595b7985bc9201a2a51a7bbd4edfb484f1c87c83b482cb
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
-  skip: True  # [win and vc<14]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
+  skip: true  # [win and vc<14]
 
 requirements:
   host:
@@ -121,7 +121,7 @@ about:
   license: Apache 2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Python Client for Google Cloud Bigtable'
+  summary: Python Client for Google Cloud Bigtable
   description: |
     Python Client for Google Cloud Bigtable
     -------------------------
