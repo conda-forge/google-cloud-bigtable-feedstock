@@ -21,7 +21,7 @@ requirements:
   run:
     - python >=3.4
     - google-api-core-grpc >=1.14.0,<2.0.0dev
-    - google-cloud-core >=1.0.3,<2.0dev
+    - google-cloud-core >=1.4.1,<2.0dev
     - grpc-google-iam-v1 >=0.12.3,<0.13dev
 
 test:
@@ -33,7 +33,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/googleapis/google-cloud-python
+  home: https://github.com/googleapis/python-bigtable
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
@@ -68,7 +68,7 @@ about:
     Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
 
   doc_url: https://googleapis.dev/python/bigtable/latest/index.html
-  dev_url: https://github.com/googleapis/google-cloud-python/
+  dev_url: https://github.com/googleapis/python-bigtable
 
 extra:
   recipe-maintainers:
