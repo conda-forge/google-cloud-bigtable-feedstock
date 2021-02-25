@@ -1,7 +1,7 @@
 About google-cloud-bigtable
 ===========================
 
-Home: https://github.com/googleapis/google-cloud-python
+Home: https://github.com/googleapis/python-bigtable
 
 Package license: Apache-2.0
 
@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bi
 
 Summary: Python Client for Google Cloud Bigtable
 
-Development: https://github.com/googleapis/google-cloud-python/
+Development: https://github.com/googleapis/python-bigtable
 
 Documentation: https://googleapis.dev/python/bigtable/latest/index.html
 

@@ -1,5 +1,5 @@
 {% set name = "google-cloud-bigtable" %}
-{% set version = "1.2.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eea9d4aca54499b555a893fa441deac1bd7ae9cbc8e03bdd681fd33fad72e170
+  sha256: 90bd53a19c33c34101b8567c82a6dc0386af4118d70e1ad69b49375358a21aa6
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
   noarch: python
 
@@ -21,7 +21,7 @@ requirements:
   run:
     - python >=3.4
     - google-api-core-grpc >=1.14.0,<2.0.0dev
-    - google-cloud-core >=1.0.3,<2.0dev
+    - google-cloud-core >=1.4.1,<2.0dev
     - grpc-google-iam-v1 >=0.12.3,<0.13dev
 
 test:
@@ -33,11 +33,11 @@ test:
     - pip
 
 about:
-  home: https://github.com/googleapis/google-cloud-python
+  home: https://github.com/googleapis/python-bigtable
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Python Client for Google Cloud Bigtable'
+  summary: Python Client for Google Cloud Bigtable
   description: |
     Python Client for Google Cloud Bigtable
     -------------------------
@@ -68,7 +68,7 @@ about:
     Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
 
   doc_url: https://googleapis.dev/python/bigtable/latest/index.html
-  dev_url: https://github.com/googleapis/google-cloud-python/
+  dev_url: https://github.com/googleapis/python-bigtable
 
 extra:
   recipe-maintainers:
