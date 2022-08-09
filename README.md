@@ -35,11 +35,13 @@ In order to use this library, you first need to go through the following steps:
 
 Supported Python Versions
 -------------------------
-Python >= 3.5
+Python >= 3.7
 
 Deprecated Python Versions
 -------------------------
-Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+* Python 2.7: the last released version which supported Python 2.7 was version 1.7.0, released 2021-02-09.
+* Python 3.5: the last released version which supported Python 3.5 was version 1.7.0, released 2021-02-09.
+* Python 3.6: the last released version which supported Python 3.6 was version v2.10.1, released 2022-06-03.
 
 
 Current build status
