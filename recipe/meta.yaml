@@ -1,5 +1,5 @@
 {% set name = "google-cloud-bigtable" %}
-{% set version = "2.13.0" %}
+{% set version = "2.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-bigtable-{{ version }}.tar.gz
-  sha256: 34a9fc8f9f13e5d96f26799d633ecf3c5f781b6227c61ade7fde2bab0c79dc24
+  sha256: 9e4d402282a824d4639e44201bc0b350be3d1918b8fee703ce124582976f9d05
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
     - grpc-google-iam-v1 >=0.12.4,<1.0.0dev
     - packaging >=14.3
     - proto-plus >=1.22.0,<2.0.0dev
-    - protobuf >=3.20.2,<5.0.0dev
+    - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
 
 test:
   imports:
