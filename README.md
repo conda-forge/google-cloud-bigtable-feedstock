@@ -1,11 +1,11 @@
-About google-cloud-bigtable
-===========================
+About google-cloud-bigtable-feedstock
+=====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bigtable-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/googleapis/python-bigtable
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bigtable-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python Client for Google Cloud Bigtable
 
