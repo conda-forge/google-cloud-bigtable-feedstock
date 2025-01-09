@@ -1,5 +1,5 @@
 {% set name = "google-cloud-bigtable" %}
-{% set version = "2.27.0" %}
+{% set version = "2.28.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: a6a2198283bd7d11e43c3f98767a9af43789b389af85a761a05b08fdd9f57bab
+  sha256: 073b4f734331bdb51790d5a0d0b58bf79902ffdd7d51227abf2881830fac824d
 
 build:
   number: 0
