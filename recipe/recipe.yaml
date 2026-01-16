@@ -1,26 +1,29 @@
-{% set name = "google-cloud-bigtable" %}
-{% set version = "2.35.0" %}
+schema_version: 1
+
+context:
+  name: google-cloud-bigtable
+  version: 2.35.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
   sha256: f5699012c5fea4bd4bdf7e80e5e3a812a847eb8f41bf8dc2f43095d6d876b83b
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
+  number: 1
   noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - google-api-core >=2.17.0,<3.0.0
     - google-api-core-grpc
     - google-auth >=2.23.0,<3.0.0,!=2.24.0,!=2.25.0
@@ -31,19 +34,20 @@ requirements:
     - protobuf >=3.20.2,<7.0.0,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
     - google-crc32c >=1.5.0,<2.0.0dev
 
-test:
-  imports:
-    - google.cloud.bigtable
-  commands:
-    - pip check
-  requires:
-    - python {{ python_min }}
-    - pip
+tests:
+  - python:
+      imports:
+        - google.cloud.bigtable
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pip
+    script:
+      - pip check
 
 about:
-  home: https://github.com/googleapis/python-bigtable
   license: Apache-2.0
-  license_family: APACHE
   license_file: LICENSE
   summary: Python Client for Google Cloud Bigtable
   description: |
@@ -77,8 +81,9 @@ about:
     * Python 3.5: the last released version which supported Python 3.5 was version 1.7.0, released 2021-02-09.
     * Python 3.6: the last released version which supported Python 3.6 was version v2.10.1, released 2022-06-03.
 
-  doc_url: https://googleapis.dev/python/bigtable/latest/index.html
-  dev_url: https://github.com/googleapis/python-bigtable
+  homepage: https://github.com/googleapis/python-bigtable
+  repository: https://github.com/googleapis/python-bigtable
+  documentation: https://googleapis.dev/python/bigtable/latest/index.html
 
 extra:
   recipe-maintainers:
