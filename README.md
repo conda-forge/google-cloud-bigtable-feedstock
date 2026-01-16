@@ -43,7 +43,6 @@ Deprecated Python Versions
 * Python 3.5: the last released version which supported Python 3.5 was version 1.7.0, released 2021-02-09.
 * Python 3.6: the last released version which supported Python 3.6 was version v2.10.1, released 2022-06-03.
 
-
 Current build status
 ====================
 
