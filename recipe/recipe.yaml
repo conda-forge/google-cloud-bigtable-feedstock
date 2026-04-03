@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-bigtable
-  version: 2.35.0
+  version: "2.36.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: f5699012c5fea4bd4bdf7e80e5e3a812a847eb8f41bf8dc2f43095d6d876b83b
+  sha256: d5987733c2f60c739f93f259d2037858411cc994ac37cdfbccb6bb159f3ca43e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose
 
@@ -26,10 +26,10 @@ requirements:
     - python >=${{ python_min }}
     - google-api-core >=2.17.0,<3.0.0
     - google-api-core-grpc
-    - google-auth >=2.23.0,<3.0.0,!=2.24.0,!=2.25.0
     - google-cloud-core >=1.4.4,<3.0.0
+    - google-auth >=2.23.0,<3.0.0,!=2.24.0,!=2.25.0
     - grpc-google-iam-v1 >=0.12.4,<1.0.0
-    # use the more restrictive constraint for python >=3.13
+    # more restrictive constraint for python >=3.13
     - proto-plus >=1.25.0,<2.0.0
     - protobuf >=3.20.2,<7.0.0,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
     - google-crc32c >=1.5.0,<2.0.0dev
@@ -39,12 +39,7 @@ tests:
       imports:
         - google.cloud.bigtable
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - python ${{ python_min }}.*
-        - pip
-    script:
-      - pip check
+      pip_check: true
 
 about:
   license: Apache-2.0
