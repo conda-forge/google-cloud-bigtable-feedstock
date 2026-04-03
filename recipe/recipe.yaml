@@ -26,10 +26,10 @@ requirements:
     - python >=${{ python_min }}
     - google-api-core >=2.17.0,<3.0.0
     - google-api-core-grpc
-    - google-auth >=2.23.0,<3.0.0,!=2.24.0,!=2.25.0
     - google-cloud-core >=1.4.4,<3.0.0
+    - google-auth >=2.23.0,<3.0.0,!=2.24.0,!=2.25.0
     - grpc-google-iam-v1 >=0.12.4,<1.0.0
-    # use the more restrictive constraint for python >=3.13
+    # more restrictive constraint for python >=3.13
     - proto-plus >=1.25.0,<2.0.0
     - protobuf >=3.20.2,<7.0.0,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
     - google-crc32c >=1.5.0,<2.0.0dev
@@ -39,12 +39,7 @@ tests:
       imports:
         - google.cloud.bigtable
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - python ${{ python_min }}.*
-        - pip
-    script:
-      - pip check
+      pip_check: true
 
 about:
   license: Apache-2.0
