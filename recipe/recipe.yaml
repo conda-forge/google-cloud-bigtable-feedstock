@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-bigtable
-  version: "2.41.0"
+  version: "2.42.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: d0c424bae6238eb16ffc0922be79da00d20d23e0750ea46742ffd4542c50fd26
+  sha256: 5fe7372715ade15e6ca532631ef57650268b14abe62c6688b33176415d3c65ed
 
 build:
   number: 0
