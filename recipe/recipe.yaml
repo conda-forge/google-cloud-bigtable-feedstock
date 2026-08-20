@@ -81,9 +81,9 @@ about:
     * Python 3.5: the last released version which supported Python 3.5 was version 1.7.0, released 2021-02-09.
     * Python 3.6: the last released version which supported Python 3.6 was version v2.10.1, released 2022-06-03.
 
-  homepage: https://github.com/googleapis/python-bigtable
-  repository: https://github.com/googleapis/python-bigtable
-  documentation: https://googleapis.dev/python/bigtable/latest/index.html
+  homepage: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigtable
+  repository: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigtable
+  documentation: https://github.com/googleapis/google-cloud-python/blob/main/packages/google-cloud-bigtable/README.rst
 
 extra:
   recipe-maintainers:
