@@ -3,15 +3,15 @@ About google-cloud-bigtable-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-bigtable-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/googleapis/python-bigtable
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigtable
 
 Package license: Apache-2.0
 
 Summary: Python Client for Google Cloud Bigtable
 
-Development: https://github.com/googleapis/python-bigtable
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigtable
 
-Documentation: https://googleapis.dev/python/bigtable/latest/index.html
+Documentation: https://github.com/googleapis/google-cloud-python/blob/main/packages/google-cloud-bigtable/README.rst
 
 Python Client for Google Cloud Bigtable
 -------------------------
